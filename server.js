@@ -2,7 +2,8 @@ const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const cors = require('cors');
-const authRoutes = require('./routes/authRoutes')
+const authRoutes = require('./routes/authRoutes');
+const productRoutes = require('./routes/productRoutes');
 
 dotenv.config();
 const app = express();
@@ -19,4 +20,4 @@ mongoose.connect(process.env.MONGO_URI)
             console.log("Server running on port 5000");
         })
     })
-    .catch(err => console.error(err))
+    .catch(err => console.error(err));
